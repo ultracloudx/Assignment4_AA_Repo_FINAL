@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4871311fdc8fa294bad960b402b85ae0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ugly Byte Free Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f4f715e8255e569438a3d7f243bc0798, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

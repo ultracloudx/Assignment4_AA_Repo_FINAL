@@ -1,0 +1,64 @@
+Intro:
+-------
+PlayerPrefs:
+String PlayerNAME, float RotationSPEED, float PinSPEED, int MaxLIVES, float MaxTIME
+float currTime, int currLives, int currScore, int isSave, //float isTimeRemaining;
+[ ] 
+[x] Name Menu (New Game)
+	[x] Inputfield
+		[x] Name
+		[x] Set PlayerPref
+[x] Instructions
+[x] Load Game
+	[x] Loads save data from PlayerPrefs.
+		-If player applies settings or starts new game, load game is overwritten and unaccessible.
+[x] Settings Menu
+	[x] Sliders
+		[x] Slider for rotation speed
+			[x] Set PlayerPref
+		[x] Slider for pin speed
+			[x] Set PlayerPref
+	[x] Dropdown
+		[x] Dropdown for lives
+			[x] Set PlayerPref
+		[x] Dropdown for playtime
+			[x] Set PlayerPref
+	[x] Checkboxes/Toggles
+		[x] Music - set box to toggle if audio volume is 0 or default (0.15)
+	[x] Buttons
+		[x] Back
+		[x] Apply
+
+[x] Quit Game
+	[x] No button
+	[x] Yes Button
+
+Game Scene:
+-----------
+[x] Score
+[x] Name
+[x] Lives
+	[x] Lives Selected
+	[x] Lives Remaining
+[x] Clock
+
+[x] Pause Screen
+	[x] Buttons
+		[x] Resume
+		[x] Music (SOMEHOW NOT WORKING)
+		[x] Save & Quit
+		[x] Quit
+
+Exit Scene:
+-----------
+[x] Results
+	[x] Final Score
+	[x] Time remaining [x] Time Selected
+	[x] Lives Selected [x] Pin Speed [x] Rotator Speed
+[x] Credits
+[x] Option to play again or Quit
+
+[Notes]
+- massive instance referencing error with the music. Solved problem by rewriting the script for AudioManager. The toggle function is separate in MusicToggle.cs, directly referencing "BGM" with FindObjectOfType<AudioManager>().Play("BGM") or .Pause("BGM").
+- PlayerPref "isSave" is reset to 0 when applying settings in option, and starting the game via the name entry screen.
+- Load Game button does not work if currLives PlayerPref is 0.
